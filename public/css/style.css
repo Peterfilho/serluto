@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  margin-top: auto;
+
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+#social{
+  font-size: 17px
+}
+
+div.nav-wrapper {
+  background: #53ad23;
+}
+
+span.badge{
+  margin-top: 8px;
+}
+
+footer {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/17d37af3-dcc5-44fe-954d-6d43e0b9daac/d3eovhx-7b7af2fb-d7c3-4e9e-9f7d-35a93aa20528.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTdkMzdhZjMtZGNjNS00NGZlLTk1NGQtNmQ0M2UwYjlkYWFjXC9kM2Vvdmh4LTdiN2FmMmZiLWQ3YzMtNGU5ZS05ZjdkLTM1YTkzYWEyMDUyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.4fih7sVTiiF4n86z4WYTWvF19KY785wUC2lNHX09Xa8);
+  opacity: 0.9;
+  background-size: cover;
+  background-position: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+#footer {
+  color : red;
+  font-weight: bold;
+}
+
+#footer-copyright{
+  background-color: rgb(51 51 51 / 45%);
+}
