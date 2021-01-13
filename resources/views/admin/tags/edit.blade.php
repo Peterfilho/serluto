@@ -7,11 +7,11 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>
-                            Edit Tag
+                        <h4>
+                            Editar Tag
 
-                            <a href="{{ url('admin/tags') }}" class="btn btn-default pull-right">Go Back</a>
-                        </h2>
+                            <a href="{{ url('admin/tags') }}" class="btn btn-default pull-right">Voltar</a>
+                        </h4>
                     </div>
 
                     <div class="panel-body">
@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
                                     <button type="submit" class="btn btn-primary">
-                                        Update
+                                        Salvar
                                     </button>
                                 </div>
                             </div>

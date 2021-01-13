@@ -6,11 +6,11 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>
-                            Comments
+                        <h4>
+                            Commetários
 
                             <a href="{{ url('admin/comments/create') }}" class="btn btn-default pull-right">Create New</a>
-                        </h2>
+                        </h4>
                     </div>
 
                     <div class="panel-body">
@@ -18,8 +18,8 @@
                             <thead>
                                 <tr>
                                     <th>Post</th>
-                                    <th>Comment</th>
-                                    <th>Action</th>
+                                    <th>Commetário</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,7 +28,7 @@
                                         <td>{{ $comment->post->title }}</td>
                                         <td>{{ $comment->body }}</td>
                                         <td>
-                                            <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
+                                            <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn-floating red btn-small"><i class="material-icons">delete</i></a>
                                         </td>
                                     </tr>
                                 @empty

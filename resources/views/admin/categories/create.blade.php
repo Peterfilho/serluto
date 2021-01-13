@@ -1,17 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
         <div class="row">
 
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>
-                            Create Category
+                        <h4>
+                            Criar categoria
 
-                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">Go Back</a>
-                        </h2>
+                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">Voltar</a>
+                        </h4>
                     </div>
 
                     <div class="panel-body">
@@ -22,7 +21,7 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
                                     <button type="submit" class="btn btn-primary">
-                                        Create
+                                        Criar
                                     </button>
                                 </div>
                             </div>
@@ -33,5 +32,4 @@
             </div>
 
         </div>
-    </div>
 @endsection

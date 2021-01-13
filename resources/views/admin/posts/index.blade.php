@@ -63,7 +63,16 @@
                                           @endif
                                             <a href="{{ url("/admin/posts/{$post->id}") }}" class="btn-floating blue btn-small"><i class="material-icons">visibility</i></a>
                                             <a href="{{ url("/admin/posts/{$post->id}/edit") }}" class="btn-floating yellow darken-1 btn-small"><i class="material-icons">create</i></a>
-                                            <a href="{{ url("/admin/posts/{$post->id}") }}" class="btn-floating red btn-small"><i class="material-icons">delete</i></a>
+
+                                            <form action="{{ url("/admin/posts/{$post->id}") }}" method="POST">
+                                              @csrf
+                                              @method('DELETE')
+                                              <button type="submit" name="" class="btn-floating red btn-small">
+                                                <i class="material-icons red">delete</i>
+                                              </button>
+                                            </form>
+
+                                            <!-- <a href="{{ url("/admin/posts/{$post->id}") }}" class="btn-floating red btn-small"><i class="material-icons">delete</i></a> -->
                                           </div>
                                         </td>
 

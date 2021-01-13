@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
         <div class="row">
 
             <div class="col-md-12">
@@ -27,8 +26,8 @@
                                     <tr>
                                         <td>{{ $tag->name }}</td>
                                         <td>
-                                            <a href="{{ url("/admin/tags/{$tag->id}/edit") }}" class="btn btn-xs btn-info">Edit</a>
-                                            <a href="{{ url("/admin/tags/{$tag->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
+                                            <a href="{{ url("/admin/tags/{$tag->id}/edit") }}" class="btn-floating yellow darken-1 btn-small"><i class="material-icons">edit</i></a>
+                                            <a href="{{ url("/admin/tags/{$tag->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn-floating red btn-small"><i class="material-icons">delete</i></a>
                                         </td>
                                     </tr>
                                 @empty
@@ -46,5 +45,4 @@
             </div>
 
         </div>
-    </div>
 @endsection
