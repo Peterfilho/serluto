@@ -52,7 +52,8 @@
     <nav>
       <div class="nav-wrapper">
         <a href="{{ url('/') }}" class="brand-logo">
-          {{ config('app.name', 'Funerária Serluto') }}
+          <img src="{{ asset('img/serlutoTrans.png') }}" style="height: 70px; width: 220px" />
+          <!-- {{ config('app.name', 'Funerária Serluto') }} -->
         </a>
         <ul class="right hide-on-med-and-down">
         <!-- Authentication Links -->

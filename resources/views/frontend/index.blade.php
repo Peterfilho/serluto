@@ -29,9 +29,9 @@
                             </p>
                             <p>
                                 <span class="btn btn-sm btn-success">{{ $post->category->name }}</span>
-                                <span class="btn btn-sm btn-info">Comments <span class="badge">{{ $post->comments_count }}</span></span>
+                                <span class="btn btn-sm btn-info">Commentários <span class="badge">{{ $post->comments_count }}</span></span>
 
-                                <a href="{{ url("/posts/{$post->id}") }}" class="btn btn-sm btn-primary">See more</a>
+                                <a href="{{ url("/posts/{$post->id}") }}" class="btn btn-sm btn-primary">Ver mais</a>
                             </p>
                         </div>
                     </div>
@@ -40,13 +40,14 @@
                         <div class="panel-heading">Not Found!!</div>
 
                         <div class="panel-body">
-                            <p>Sorry! No post found.</p>
+                            <p>Desculpe! Nenhum post encontrado.</p>
                         </div>
                     </div>
                 @endforelse
 
                 <div align="center">
-                    {!! $posts->appends(['search' => request()->get('search')])->links() !!}
+                    {!! $posts->render() !!}
+                    <!-- {!! $posts->appends(['search' => request()->get('search')])->links() !!} -->
                 </div>
 
             </div>
