@@ -1,38 +1,24 @@
-  @if ($paginator->hasPages())
-      <ul class="pagination">
-          {{-- Previous Page Link --}}
-          @if ($paginator->onFirstPage())
-              <li class="disabled"><i class="material-icons">chevron_left</i></li>
-              @else
-              <li class="waves-effect"><a href="{{ $paginator->previousPageUrl() }}"><i class="material-icons">chevron_left</i></a></li>
-          @endif
+<ul class="pagination">
+    {{-- Previous Page Link --}}
+    @if ($posts->onFirstPage())
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    @else
+    <li class="waves-effect"><a href="{{ $posts->previousPageUrl() }}"><i class="material-icons">chevron_left</i></a></li>
+    @endif
 
-        {{-- Pagination Elements --}}
-        @foreach ($elements as $element)
-            {{-- "Three Dots" Separator --}}
-            @if (is_string($element))
-                <li class="disabled">{{ $element }}</li>
-            @endif
-
-            {{-- Array Of Links --}}
-            @if (is_array($element))
-                @foreach ($element as $page => $url)
-                    @if ($page == $paginator->currentPage())
-                        <li class="active">
-                            <a>{{ $page }}</a>
-                        </li>
-                    @else
-                        <li class="waves-effect"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
-                    @endif
-                @endforeach
-            @endif
-        @endforeach
-
-        {{-- Next Page Link --}}
-        @if ($paginator->hasMorePages())
-            <li class="waves-effect"><a href="{{ $paginator->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+    {{-- Page Number Links --}}
+    @for($i=1; $i<=$posts->lastItem(); $i++)
+        @if($i==$posts->currentPage())
+            <li class="active"><a href="?page={{$i}}">{{$i}}</a></li>
         @else
-            <li class="disabled"><a href="{{ $paginator->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+            <li class="waves-effect"><a href="?page={{$i}}">{{$i}}</a></li>
         @endif
-    </ul>
-  @endif
+    @endfor
+
+    {{-- Next Page Link --}}
+    @if ($posts->hasMorePages())
+    <li class="waves-effect"><a href="{{ $posts->nextPageUrl() }}"><i class="material-icons">chevron_right</i></a></li>
+    @else
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    @endif
+</ul>

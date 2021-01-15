@@ -46,7 +46,8 @@
                 @endforelse
 
                 <div align="center">
-                    {!! $posts->render() !!}
+                  @include('layouts.paginate')
+                    <!-- {!! ($posts->links()) !!} -->
                     <!-- {!! $posts->appends(['search' => request()->get('search')])->links() !!} -->
                 </div>
 
