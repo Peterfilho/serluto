@@ -99,9 +99,9 @@
                                 @endforelse
                             </tbody>
                         </table>
-
-                        {!! $posts->links() !!}
-
+                        <div class="center">
+                          {!! $posts->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>
