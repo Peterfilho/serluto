@@ -48,14 +48,10 @@ footer {
   background-color: rgb(51 51 51 / 45%);
 }
 
-ul.pagination {
-  margin: 15px 0;
-}
-
-ul.pagination nav{
-  background-color: #26a69a;
-}
-
 li.page-item a{
-  height: 36px;
+  height: 35px;
+}
+
+#pagination {
+  background-color: white;
 }

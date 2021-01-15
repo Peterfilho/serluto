@@ -17,7 +17,7 @@ class BlogController extends Controller
         })->with('tags', 'category', 'user')
                     ->withCount('comments')
                     ->published()
-                    ->simplePaginate(5);
+                    ->Paginate(5);
 
         return view('frontend.index', compact('posts'));
     }
