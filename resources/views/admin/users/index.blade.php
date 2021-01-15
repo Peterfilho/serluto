@@ -41,9 +41,9 @@
                                 @endforelse
                             </tbody>
                         </table>
-
-                        {!! $users->links() !!}
-
+                        <div class="center">
+                          {!! $users->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>

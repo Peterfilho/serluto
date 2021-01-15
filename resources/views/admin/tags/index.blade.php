@@ -37,9 +37,9 @@
                                 @endforelse
                             </tbody>
                         </table>
-
-                        {!! $tags->links() !!}
-
+                        <div class="center">
+                          {!! $tags->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>

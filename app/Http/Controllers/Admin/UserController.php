@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::withCount('posts')->paginate(10);
+        $users = User::withCount('posts')->paginate(5);
 
         return view('admin.users.index', compact('users'));
     }

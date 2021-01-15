@@ -38,9 +38,9 @@
                                 @endforelse
                             </tbody>
                         </table>
-
-                        {!! $comments->links() !!}
-
+                        <div class="center">
+                          {!! $comments->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>
