@@ -13,12 +13,14 @@
                             {{ $post->title }} - <small>by {{ $post->user->name }}</small>
 
                             <span class="pull-right">
-                                {{ $post->created_at->toDayDateTimeString() }}
+                                <!-- {{ $post->created_at->toDayDateTimeString() }} -->
+                                Publicado em:
+                                {{ $post->created_at->format('m/d/Y - H:i:s') }}
                             </span>
                         </div>
 
                         <div class="panel-body">
-                            <p>{{ str_limit($post->body, 200) }}</p>
+                            <p>{{ str_limit($post->body, 60) }}</p>
                             <p>
                                 Tags:
                                 @forelse ($post->tags as $tag)

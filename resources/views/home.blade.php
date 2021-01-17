@@ -15,7 +15,7 @@
 
             <div class="col-md-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Comments</div>
+                    <div class="panel-heading">Commentários</div>
 
                     <div class="panel-body">
                         <h1>{{ $comments }}</h1>
@@ -35,7 +35,7 @@
 
             <div class="col-md-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Categories</div>
+                    <div class="panel-heading">Categorias</div>
 
                     <div class="panel-body">
                         <h1>{{ $categories }}</h1>

@@ -40,7 +40,6 @@ footer {
 }
 
 #footer {
-  color : red;
   font-weight: bold;
 }
 
@@ -50,6 +49,12 @@ footer {
 
 li.page-item a{
   height: 35px;
+}
+
+li.page-item.active .page-link{
+  z-index: 1;
+  background-color: green;
+  border-color: green;
 }
 
 #pagination {
