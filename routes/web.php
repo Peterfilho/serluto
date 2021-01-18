@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'BlogController@index');
+Route::get('/', 'IndexController@index');
+Route::get('/obituaries', 'BlogController@index');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
 

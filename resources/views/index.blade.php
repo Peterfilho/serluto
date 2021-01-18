@@ -9,9 +9,7 @@
   </div>
 </div>
 
-
-<!-- <div class="section" -->
-
+<div class="section">
   <!--   Icon Section   -->
   <div class="row">
     <div class="col s12 m4 l4">
@@ -40,6 +38,8 @@
         <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
       </div>
     </div>
+
   </div>
+</div>
 
 @endsection

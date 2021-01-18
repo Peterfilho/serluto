@@ -29,7 +29,8 @@
   <script src="https://kit.fontawesome.com/3b05009bdc.js" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+  <!-- Sweet Alert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
 <body>
@@ -54,19 +55,19 @@
       <div class="nav-wrapper">
         <a href="{{ url('/') }}" class="brand-logo">
           <img src="{{ asset('img/nav.png') }}" style="height: 70px; width: 220px" />
-          <!-- {{ config('app.name', 'Funerária Serluto') }} -->
         </a>
-        <ul class="right hide-on-med-and-down">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
         <!-- Authentication Links -->
         @if (Auth::guest())
-          <li><a href="#">Início<i class="material-icons left">home</i></a></li>
-          <li><a href="#">Obituários<i class="material-icons left">flare</i></a></li>
+          <li><a href="{{ url('/') }}">Início<i class="material-icons left">home</i></a></li>
+          <li><a href="{{ url('/obituaries') }}">Obituários<i class="material-icons left">flare</i></a></li>
           <li><a href="{{ route('login') }}">Login<i class="material-icons left">https</i></a></li>
             <!--li><a href="{{ route('register') }}">Register</a></li-->
         @else
           @includeWhen(Auth::user(), 'layouts._admin_menu')
-
-          <!-- Dropdown Trigger -->
           <li class="right">
             <a class="dropdown-trigger" href="#!" data-target="dropdown1">
               <i class="fas fa-user-shield left"></i>
@@ -74,15 +75,26 @@
               <i class="material-icons right">arrow_drop_down</i>
             </a>
           </li>
-          @endif
+        @endif
         </ul>
       </div>
     </nav>
 
+    <ul class="sidenav" id="mobile-demo">
+      @if (Auth::guest())
+        <li><a href="{{ url('/') }}">Início<i class="material-icons left">home</i></a></li>
+        <li><a href="{{ url('/obituaries') }}">Obituários<i class="material-icons left">flare</i></a></li>
+        <li><a href="{{ route('login') }}">Login<i class="material-icons left">https</i></a></li>
+          <!--li><a href="{{ route('register') }}">Register</a></li-->
+      @else
+        @includeWhen(Auth::user(), 'layouts._admin_menu')
+      @endif
+    </ul>
+
     <div class="container">
 
     <div class="row">
-        @include('flash::message')
+      @include('layouts.flash-swal')
     </div>
     <div class="row">
       @yield('content')
@@ -104,7 +116,7 @@
     <div class="tap-target green lighten-1 white-text" data-target="wpp">
       <div class="tap-target-content">
         <h5>Atendimento via WhatsApp</h5>
-        <p>Clique aqui e converse com um atendente pelo WhatsApp</p>
+        <p>Clique aqui e converse com um atendente agora mesmo pelo WhatsApp</p>
       </div>
     </div>
   </div>

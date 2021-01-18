@@ -36,7 +36,8 @@ class BlogController extends Controller
         $post->comments()->create([
             'body' => $request->body,
         ]);
-        flash()->overlay('Comment successfully created');
+        //flash()->overlay('Comment successfully created');
+        $this->flashSuccess("Comentário criado com sucesso!");
 
         return redirect("/posts/{$post->id}");
     }

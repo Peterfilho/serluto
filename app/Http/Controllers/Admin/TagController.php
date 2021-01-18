@@ -41,7 +41,9 @@ class TagController extends Controller
         $this->validate($request, ['name' => 'required']);
 
         Tag::create(['name' => $request->name]);
-        flash()->overlay('Tag created successfully.');
+
+        $this->flashSuccess("Post criado com sucesso!");
+        //flash()->overlay('Tag created successfully.');
 
         return redirect('/admin/tags');
     }
@@ -69,7 +71,9 @@ class TagController extends Controller
         $this->validate($request, ['name' => 'required']);
 
         $tag->update($request->all());
-        flash()->overlay('Tag updated successfully.');
+
+        $this->flashSuccess('Tag atualizada com sucesso!');
+        //flash()->overlay('Tag updated successfully.');
 
         return redirect('/admin/tags');
     }
@@ -83,7 +87,8 @@ class TagController extends Controller
     public function destroy(Tag $tag)
     {
         $tag->delete();
-        flash()->overlay('Tag deleted successfully.');
+        //flash()->overlay('Tag deleted successfully.');
+        $this->flashSuccess("TAG excluida com sucesso!");
 
         return redirect('/admin/tags');
     }
