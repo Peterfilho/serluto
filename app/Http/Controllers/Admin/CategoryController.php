@@ -84,9 +84,10 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        $this->flashConfirmation();
         $category->delete();
         //flash()->overlay('Category deleted successfully');
-        $this->flashSuccess("Categoria excluida com sucesso!");
+        //$this->flashSuccess("Categoria excluida com sucesso!");
 
         return redirect('/admin/categories');
     }

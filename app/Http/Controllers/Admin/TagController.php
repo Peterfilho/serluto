@@ -42,7 +42,7 @@ class TagController extends Controller
 
         Tag::create(['name' => $request->name]);
 
-        $this->flashSuccess("Post criado com sucesso!");
+        $this->flashSuccess("TAG criada com sucesso!");
         //flash()->overlay('Tag created successfully.');
 
         return redirect('/admin/tags');
@@ -86,9 +86,10 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
+        $this->flashConfirmation();
         $tag->delete();
         //flash()->overlay('Tag deleted successfully.');
-        $this->flashSuccess("TAG excluida com sucesso!");
+        //$this->flashSuccess("TAG excluida com sucesso!");
 
         return redirect('/admin/tags');
     }

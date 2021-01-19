@@ -95,6 +95,7 @@
 
     <div class="row">
       @include('layouts.flash-swal')
+      @include('layouts.flash-confirm-swal')
     </div>
     <div class="row">
       @yield('content')

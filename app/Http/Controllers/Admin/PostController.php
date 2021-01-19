@@ -140,9 +140,10 @@ class PostController extends Controller
             return redirect('/admin/posts');
         }
 
+        $this->flashConfirmation();
         $post->delete();
         //flash()->overlay('Post deleted successfully.');
-        $this->flashSuccess("Post excluido com sucesso!");
+        //$this->flashSuccess("Post excluido com sucesso!");
 
         return redirect('/admin/posts');
     }

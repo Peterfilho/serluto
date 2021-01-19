@@ -28,7 +28,14 @@
                                         <td>{{ $comment->post->title }}</td>
                                         <td>{{ $comment->body }}</td>
                                         <td>
-                                            <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn-floating red btn-small"><i class="material-icons">delete</i></a>
+                                          <form action="{{ url("/admin/comments/{$comment->id}") }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" name="" class="btn-floating red btn-small">
+                                              <i class="material-icons red">delete</i>
+                                            </button>
+                                          </form>
+                                            <!-- <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn-floating red btn-small"><i class="material-icons">delete</i></a> -->
                                         </td>
                                     </tr>
                                 @empty

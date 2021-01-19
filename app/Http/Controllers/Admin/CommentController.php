@@ -35,9 +35,10 @@ class CommentController extends Controller
             return redirect('/admin/posts');
         }
 
+        $this->flashConfirmation();
         $comment->delete();
         //flash()->overlay('Comment deleted successfully.');
-        $this->flashSuccess("Comentário excluido com sucesso!");
+        //$this->flashSuccess("Comentário excluido com sucesso!");
 
         return redirect('/admin/comments');
     }

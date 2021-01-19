@@ -6,6 +6,7 @@ A simple funerary site Based on Laravel 7.0
 
 - Laravel 7.0
 - Materialize 1.0.0
+- Sweet Alert 2
 - PHP >= 7.2.5
 - OpenSSL PHP Extension
 - PDO PHP Extension

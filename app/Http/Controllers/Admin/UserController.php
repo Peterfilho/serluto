@@ -34,10 +34,10 @@ class UserController extends Controller
 
             return redirect('/admin/users');
         }
-
+        $this->flashConfirmation();
         $user->delete();
         //flash()->overlay('User deleted successfully.');
-        $this->flashError("Usuário excluido com sucesso!");
+        //$this->flashError("Usuário excluido com sucesso!");
 
         return redirect('/admin/users');
     }
