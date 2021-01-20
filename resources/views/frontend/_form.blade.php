@@ -7,8 +7,8 @@
                 {!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => 3, 'required']) !!}
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">
-                    Reply
+                <button type="submit" class="raise btn blue">
+                    Responder
                 </button>
             </div>
         {!! Form::close() !!}

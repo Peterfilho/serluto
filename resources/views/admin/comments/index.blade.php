@@ -9,7 +9,7 @@
                         <h4>
                             Commetários
 
-                            <a href="{{ url('admin/comments/create') }}" class="btn btn-default pull-right">Create New</a>
+                            <!-- <a href="{{ url('admin/comments/create') }}" class="btn btn-default pull-right">Create New</a> -->
                         </h4>
                     </div>
 

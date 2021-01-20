@@ -32,9 +32,15 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
         <!-- Authentication Links -->
         @if (Auth::guest())
-          <li><a href="{{ url('/') }}">Início<i class="material-icons left">home</i></a></li>
-          <li><a href="{{ url('/obituaries') }}">Obituários<i class="material-icons left">flare</i></a></li>
-          <li><a href="{{ route('login') }}">Login<i class="material-icons left">https</i></a></li>
+          <li class="{{ (request()->is('/')) ? 'active' : '' }}">
+            <a href="{{ url('/') }}">Início<i class="material-icons left">home</i></a>
+          </li>
+          <li class="{{ (request()->is('obituaries')) ? 'active' : '' }}">
+            <a href="{{ url('/obituaries') }}">Obituários<i class="material-icons left">flare</i></a>
+          </li>
+          <li class="{{ (request()->is('login')) ? 'active' : '' }}">
+            <a href="{{ route('login') }}">Login<i class="material-icons left">https</i></a>
+          </li>
             <!--li><a href="{{ route('register') }}">Register</a></li-->
         @else
           @includeWhen(Auth::user(), 'layouts._admin_menu')

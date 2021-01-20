@@ -9,7 +9,7 @@
                         <h4>
                             Criar categoria
 
-                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/categories') }}" class="raise btn orange right"><i class="fas fa-arrow-left left"></i> Voltar</a>
                         </h4>
                     </div>
 
@@ -20,8 +20,8 @@
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <button type="submit" class="btn btn-primary">
-                                        Criar
+                                    <button type="submit" class="raise btn green">
+                                        <i class="fas fa-plus left"></i> Criar Categoria
                                     </button>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@
                         <h4>
                             Categorias
 
-                            <a href="{{ url('admin/categories/create') }}" class="btn btn-default pull-right">Criar</a>
+                            <a href="{{ url('admin/categories/create') }}" class="raise green btn right"><i class="fas fa-plus left"></i> Criar</a>
                         </h4>
                     </div>
 

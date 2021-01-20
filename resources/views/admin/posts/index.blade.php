@@ -6,10 +6,10 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>
+                        <h4>
                             Posts
-                            <a href="{{ url('admin/posts/create') }}" class="btn right"><i class="material-icons">add</i> Criar Post</a>
-                        </h2>
+                            <a href="{{ url('admin/posts/create') }}" class="raise green btn right"><i class="fas fa-plus left"></i> Criar Post</a>
+                        </h4>
                     </div>
 
                     <div class="panel-body">

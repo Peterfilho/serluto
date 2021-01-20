@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="heading h2 center"><i class="fas fa-shield-alt"></i> Login</div>
+                <div class="heading h2 center"><i class="fas fa-shield-alt"></i> Login/div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
@@ -50,12 +50,12 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn waves-effect">
+                                <button type="submit" class="raise btn green">
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
+                                <a class="raise btn orange darken-1" href="{{ route('password.request') }}">
+                                    Esqueceu sua senha?
                                 </a>
                             </div>
                         </div>
@@ -64,4 +64,5 @@
             </div>
         </div>
     </div>
+  </div>
 @endsection

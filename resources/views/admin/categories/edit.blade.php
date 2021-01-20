@@ -9,7 +9,7 @@
                         <h2>
                             Edit Category
 
-                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">Go Back</a>
+                            <a href="{{ url('admin/categories') }}" class="raise btn orange right"><i class="fas fa-arrow-left left"></i> Voltar</a>
                         </h2>
                     </div>
 
@@ -20,8 +20,8 @@
 
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <button type="submit" class="btn btn-primary">
-                                        Update
+                                    <button type="submit" class="raise btn green">
+                                        <i class="fas fa-wrench left"></i> Atualizar
                                     </button>
                                 </div>
                             </div>

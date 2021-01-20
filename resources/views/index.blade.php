@@ -13,7 +13,7 @@
   <!--   Icon Section   -->
   <div class="row">
 
-    <div class="col s12 m4 l3 z-depth-1 aos-animate" id="plano" data-aos="fade-right" data-aos-delay="0">
+    <div class="col s12 m4 l3 z-depth-1" id="plano" data-aos="fade-right">
       <div class="icon-block">
         <h2 class="center light-green-text"><i class="fas fa-award"></i></h2>
         <h5 class="center">Plano 1</h5>
@@ -46,5 +46,7 @@
 
   </div>
 </div>
+
+
 
 @endsection

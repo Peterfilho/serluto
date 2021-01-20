@@ -8,7 +8,8 @@
                     <div class="panel-heading">
                         <h4>
                             Tags
-                            <a href="{{ url('admin/tags/create') }}" class="btn waves-effect right"><i class="material-icons">add</i> Criar TAG</a>
+
+                            <a href="{{ url('admin/tags/create') }}" class="raise btn green right"><i class="fas fa-plus left"></i>Criar TAG</a>
                         </h4>
                     </div>
 
@@ -16,8 +17,8 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Action</th>
+                                    <th>Nome</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,7 +42,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="2">No tag available.</td>
+                                        <td colspan="2">Sem TAG's cadastradas.</td>
                                     </tr>
                                 @endforelse
                             </tbody>

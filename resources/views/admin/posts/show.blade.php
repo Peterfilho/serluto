@@ -9,7 +9,7 @@
                         <h4>
                             {{ $post->title }} <small>Por {{ $post->user->name }}</small>
 
-                            <a href="{{ url('admin/posts') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/posts') }}" class="raise btn orange right"><i class="fas fa-arrow-left left"></i> Voltar</a>
                         </h4>
                     </div>
 

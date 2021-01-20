@@ -75,7 +75,58 @@ li.page-item.active .page-link{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   animation-name: example;
-  animation-duration: 0.35s;
+  animation-duration: 1s;
   border-left: 8px solid green;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* button effects */
+
+ /* Size can also be negative; see how it's smaller than the element */
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em adjust-hue(#53ad23, 45deg);
+  transform: translateY(-0.25em);
+}
+
+
+/*  Multiple shadows, one on the outside, another on the inside */
+.offset {
+  box-shadow:
+    0.3em 0.3em 0 0 #53ad23,
+    inset 0.3em 0.3em 0 0 #53ad23;
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 0 0 0 adjust-hue(#53ad23, 45deg),
+      inset 6em 3.5em 0 0 #53ad23;
+  }
+}
+
+/* // Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties. */
+button {
+  color: #53ad23;
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: #53ad23;
+    color: #fff;
+  }
+}
+
+/* // Basic button styles */
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+ /* end button effects*/
+a:hover {
+  color : white;
 }
