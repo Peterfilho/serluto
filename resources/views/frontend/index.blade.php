@@ -30,10 +30,12 @@
                                 @endforelse
                             </p>
                             <p>
-                                <span class="btn btn-sm btn-success">{{ $post->category->name }}</span>
-                                <span class="btn btn-sm btn-info">Commentários <span class="badge">{{ $post->comments_count }}</span></span>
-
-                                <a href="{{ url("/posts/{$post->id}") }}" class="btn btn-sm btn-primary">Ver mais</a>
+                                Categoria: <span class="label label-default">{{ $post->category->name }}</span>
+                            </p>
+                            <p>
+                                <span class="raise btn orange"><i class="far fa-comment left"></i>Commentários <span class="new-badge orange darken-2">{{ $post->comments_count }}</span></span>
+                        
+                                <a href="{{ url("/posts/{$post->id}") }}" class="raise btn green"><i class="fas fa-plus left"></i>Ver mais</a>
                             </p>
                         </div>
                     </div>

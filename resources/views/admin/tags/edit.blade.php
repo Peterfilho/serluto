@@ -10,7 +10,7 @@
                         <h4>
                             Editar Tag
 
-                            <a href="{{ url('admin/tags') }}" class="raise btn orange right"><i class="fas fa-arrow-left "></i> Voltar</a>
+                            <a href="{{ url('admin/tags') }}" class="raise btn orange right"><i class="fas fa-arrow-left left"></i> Voltar</a>
                         </h4>
                     </div>
 

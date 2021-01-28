@@ -67,15 +67,20 @@
       @endif
     </ul>
 
-    <div class="container">
 
-    <div class="row">
-      @include('layouts.flash-swal')
-      @include('layouts.flash-confirm-swal')
+    <div class="container" id="container">
+      <div class="row" id="row_flash">
+        @include('layouts.flash-swal')
+        @include('layouts.flash-confirm-swal')
+      </div>
+      <div class="row">
+        @yield('content')
+      </div>
     </div>
-    <div class="row">
-      @yield('content')
-    </div>
+
+
+
+
 
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large green pulse" id="wpp" href="https://api.whatsapp.com/send?1=pt_BR&phone=42988151563&text=Contato%20do%20site" target="_blank">
@@ -96,17 +101,19 @@
         <p>Clique aqui e converse com um atendente agora mesmo pelo WhatsApp</p>
       </div>
     </div>
-  </div>
-
 
     <footer class="page-footer green lighten-1 s12">
       <div class="container" id="footer">
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">Funerária Serluto</h5>
-            <p class="grey-text text-lighten-4">Há mais de 20 anos atendendo a comunidade de Turvo e região firmamos o compromisso e respeito dando todo suporte necessário no momento mais difícil dando tranquilidade aos clientes.</p>
+            <p class="white-text text-lighten-4" id="text-footer">
+              "Há mais de 20 anos atendendo a comunidade de Turvo e região
+              firmamos o compromisso e respeito dando todo suporte necessário
+              no momento mais difícil dando tranquilidade aos clientes"
+            </p>
           </div>
-          <div class="col l3 s12 right">
+          <div class="col l3 s12 right" id="social-footer">
             <h5 class="white-text">Contato</h5>
             <ul id="social">
               <li><a class="white-text" href="#!"><i class="fab fa-facebook-square fa-2x"></i> Facebook</a></li>
@@ -128,8 +135,8 @@
       </div>
     </footer>
 </body>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<script>AOS.init();</script>
+
 </html>

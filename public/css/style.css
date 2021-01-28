@@ -31,7 +31,7 @@ span.badge{
 
 footer {
   background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/17d37af3-dcc5-44fe-954d-6d43e0b9daac/d3eovhx-7b7af2fb-d7c3-4e9e-9f7d-35a93aa20528.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTdkMzdhZjMtZGNjNS00NGZlLTk1NGQtNmQ0M2UwYjlkYWFjXC9kM2Vvdmh4LTdiN2FmMmZiLWQ3YzMtNGU5ZS05ZjdkLTM1YTkzYWEyMDUyOC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.4fih7sVTiiF4n86z4WYTWvF19KY785wUC2lNHX09Xa8);
-  opacity: 0.9;
+  opacity: 0.6;
   background-size: cover;
   background-position: center;
 	display: flex;
@@ -41,7 +41,14 @@ footer {
 
 #footer {
   font-weight: bold;
+  color: white;
 }
+
+#text-footer {
+  color: white;
+  font-style: oblique;
+}
+
 
 #footer-copyright{
   background-color: rgb(51 51 51 / 45%);
@@ -129,4 +136,144 @@ button {
  /* end button effects*/
 a:hover {
   color : white;
+}
+
+.icon-block p{
+  text-align: justify;
+}
+
+/* Header */
+
+.header {
+  	height: 60vh;
+  	background-image:
+	  linear-gradient(to right bottom,
+     rgba(76, 216, 255, 0.5),
+     rgba(30, 108, 217, 0.5)),
+     /* url('https://catholiclife.diolc.org/wp-content/uploads/2020/01/64508-thinkstockphotos-645973016-beerphotographer.1200w.tn_.jpg'); */
+     url('https://media.swncdn.com/cms/CW/Couples/singles/39120-manlookingatsun-sunburst-thankful-thinkstock-beerphotographer-531630954.1200w.tn.jpg');
+
+
+	background-size: cover;
+  	background-position: center;
+  	position: relative;
+
+  	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+#advantages {
+    	height: 50vh;
+    	background-image:
+  	  linear-gradient(to right bottom,
+       rgba(76, 216, 255, 0.5),
+       rgba(30, 108, 217, 0.5)),
+       /*url('https://www.ucg.org/files/image/article/2020/05/13/the-holy-spirit-key-to-real-change-in-your-life_0.jpg'); */
+        url('https://assets.answersingenesis.org/img/cms/content/contentnode/header_image/holy-spirit-a-she-header.jpg');
+
+  	background-size: cover;
+    	background-position: top;
+    	position: relative;
+
+    	clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+#heading-primary {
+  	display: block;
+  	font-size: 45px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
+}
+
+#heading-secondary {
+  	font-size: 12px;
+  	font-weight: 700;
+  	letter-spacing: 7.4px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+  	position: absolute;
+  	top: 50%;
+  	left: 25%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+}
+
+.heading-primary {
+  	color: #fff;
+  	text-transform: uppercase;
+
+  	backface-visibility: hidden;
+  	margin-bottom: 30px;
+}
+
+.heading-primary-main {
+  	display: block;
+  	font-size: 45px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  	display: block;
+  	font-size: 12px;
+  	font-weight: 700;
+  	letter-spacing: 7.4px;
+}
+
+#adress {
+  padding: 25px;
+  font-size: 15px;
+  font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+}
+
+.heading-secondary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+}
+
+/* Plans Lists */
+
+.check-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 5px;
+    height: 11px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: #00a8a8;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+}
+
+/* Boilerplate stuff */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.modal-trigger {
+  margin-top: 20px;
 }

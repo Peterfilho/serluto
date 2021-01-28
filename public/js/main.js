@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
    });
  });
 
-// FUNÇÃO WPP
+// // FUNÇÃO WPP
 // $(document).ready(function(){
 //    $('.tap-target').tapTarget();
 //    $('.tap-target').tapTarget('open');
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
    $('.sidenav').sidenav();
+   $('.modal').modal();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,3 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //     return false;
 //   })
 // }
+function hideDiv (){
+  $('.container').remove();
+  $('#row_flash').remove();
+}

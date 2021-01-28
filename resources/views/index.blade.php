@@ -1,52 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
+<script> hideDiv()</script>
+</div>
+</div>
 
-<div class="section no-pad-bot" id="index-banner">
-  <div class="row center">
-    <img class="responsive-img" src="{{ asset('img/logo1.png') }}"></img>
-    <h5 class="header col s12 light">Respeito ao ser humano e à natureza</h5>
+<header class="header" data-aos="fade-left">
+  <div class="text-box">
+    <h2 class="heading-primary">
+      <span class="heading-primary-main" data-aos="fade-right">Funerária SerLuto</span>
+      <span class="heading-primary-sub" data-aos="fade-left">Respeito ao ser humano e à natureza</span>
+    </h2>
+  </div>
+</header>
+
+<div class="container">
+  <div class="section">
+    @include('modals.modal')
   </div>
 </div>
 
-<div class="section">
-  <!--   Icon Section   -->
-  <div class="row">
-
-    <div class="col s12 m4 l3 z-depth-1" id="plano" data-aos="fade-right">
-      <div class="icon-block">
-        <h2 class="center light-green-text"><i class="fas fa-award"></i></h2>
-        <h5 class="center">Plano 1</h5>
-
-        <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-      </div>
-    </div>
-    <div class="col l1">
-    </div>
-    <div class="col s12 m4 l3 z-depth-1" id="plano" data-aos="fade-up">
-      <div class="icon-block">
-        <h2 class="center light-green-text"><i class="fas fa-award"></i></h2>
-        <h5 class="center">Plano 2</h5>
-
-        <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-      </div>
-    </div>
-    <div class="col l1">
-    </div>
-    <div class="col s12 m4 l3 z-depth-1" id="plano" data-aos="fade-left">
-      <div class="icon-block">
-        <h2 class="center light-green-text"><i class="fas fa-award"></i></h2>
-        <h5 class="center">Plano 3</h5>
-
-        <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-      </div>
-    </div>
-    <div class="col l1">
-    </div>
-
+<div id="advantages" data-aos="fade-up">
+  <div class="texbox">
+    <h2 class="heading-secondary">
+      <span id="heading-primary" data-aos="fade-right">Funerária SerLuto</span>
+      <span id="heading-secondary" data-aos="fade-left">Tranquilidade para quem fica</span>
+    </h2>
   </div>
 </div>
+<br>
 
+<div class="row grey lighten-3">
+  <div class="l6 s12 left" id="adress" data-aos="fade-left">
+    <h3>Endereço</h3>
+    <p>Cidade: Turvo - PR - 85150000</p>
+    <p>Rua: Eucalina Nunes, Número: 501, centro</p>
+    <p>Referência: Próximo a rodoviária.</p>
+    <p>Telefone 1: (42) 3642-1943</p>
+    <p>Telefone 2: (42) 99134-3218</p>
+    <p>Telefone 3: (42) 99114-4637</p>
+  </div>
 
-
+  <div class="l6 s12 right" data-aos="fade-right">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018.5880452141255!2d-51.53899934416549!3d-25.047837032725315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzUxLjQiUyA1McKwMzInMTkuNiJX!5e0!3m2!1spt-BR!2sbr!4v1611289462999!5m2!1spt-BR!2sbr" allowfullscreen="" aria-hidden="false" width="500px" height="400px"></iframe>
+  </div>
+</div>
 @endsection
